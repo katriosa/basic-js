@@ -18,14 +18,12 @@ class DepthCalculator {
   }
 
   calculateDepth(arr) {
-  throw new NotImplementedError("Not implemented");
-
-    // if (arr.find((el) => Array.isArray(el))) {
-    //   const flatArray = arr.flat();
-    //   this.count += 1;
-    //   this.calculateDepth(flatArray);
-    // }
-    // return this.count;
+    if (arr.find((el) => Array.isArray(el))) {
+      const flatArray = arr.flat();
+      this.count += 1;
+      this.calculateDepth(flatArray);
+    }
+    return this.count;
   }
 }
 
